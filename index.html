@@ -31,33 +31,16 @@
         .font-serif-elegant { font-family: 'Dancing Script', cursive; }
         .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
         .bg-pattern { background-color: #fff5f7; background-image: url("https://www.transparenttextures.com/patterns/cubes.png"); }
+        .floral-corner {
+            position: absolute;
+            width: 150px;
+            opacity: 0.8;
+            z-index: 0;
+        }
+        @media (min-width: 768px) { .floral-corner { width: 550px; } }
         .photo-frame {
             border: 8px solid white;
             box-shadow: 0 10px 25px rgba(219, 39, 119, 0.2);
-        }
-        .floral-corner {
-            position: fixed; /* Ubah ke fixed agar tetap di pojok layar saat scroll */
-            width: 250px;
-            opacity: 0.8;
-            z-index: 0; /* INI KUNCINYA: Supaya di bawah teks */
-            pointer-events: none; /* Supaya tombol di atasnya tetap bisa diklik */
-        }
-        
-        /* Pengaturan spesifik untuk masing-masing sudut */
-        .top-0.left-0 {
-            top: -20px;
-            left: -20px;
-        }
-        
-        .bottom-0.right-0 {
-            bottom: -20px; /* Nilai negatif supaya lebih menjorok ke pojok bawah */
-            right: -20px;  /* Nilai negatif supaya lebih menjorok ke pojok kanan */
-        }
-
-        @media (min-width: 768px) { 
-            .floral-corner { width: 500px; } 
-            .bottom-0.right-0 { bottom: -50px; right: -50px; }
-            .top-0.left-0 { top: -50px; left: -50px; }
         }
     </style>
 </head>
@@ -133,7 +116,7 @@
         </div>
     </section>
 
-    <footer class="py-12 text-center text-gray-500 text-sm relative z-10">
+    <footer class="py-12 text-center text-gray-500 text-sm">
         <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami <br> apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
         <p class="mt-6 font-semibold">Wassalamu’alaikum Wr. Wb.</p>
         <div class="mt-10 opacity-50">
